@@ -1,0 +1,200 @@
+shasianand@LAPTOP-CIANLII3:~$ redis-cli
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379> flushall
+OK
+127.0.0.1:6379> sadd drugs name dolo azithromycin paraetomol addreall brilinta cephalexin doxycycline omeprazole tramadol xanax
+(integer) 11
+127.0.0.1:6379> sadd drugs dose 650 100 500 50 25 100 150 200 250 300
+(integer) 10
+127.0.0.1:6379> sadd drugs expiry 1mnl 2mnl 3mnl 4mnl 5mnl 6mnl 7mnl 8mnl 9mnl 10mnl
+(integer) 11
+127.0.0.1:6379> sadd drugs cp 10 20 30 40 50 100 90 80 70 60
+(integer) 9
+127.0.0.1:6379> sadd drugs sp 11 21 31 41 51 101 91 81 71 61
+(integer) 11
+127.0.0.1:6379> sadd drugsexpiry name Dolo Azithromycin Paraetomol Addreall Brilinta Cephalexin Doxycycline Omeprazole Tramadol Xanax
+(integer) 11
+127.0.0.1:6379> sadd drugsexpiry expiry 1Mnl 2Mnl 3Mnl 4Mnl 5Mnl 6Mnl 7Mnl 8Mnl 9Mnl 10Mnl
+(integer) 11
+127.0.0.1:6379> sadd drugsexpiry quantity 105 205 305 405 505 605 705 805 905 155
+(integer) 11
+127.0.0.1:6379> sadd sales name DOLO AZITHROMYCIN PARACETOMOL ADDERALL BRILINTA CEOHALEXIN DOXYCYCLINE OMEPRAZOLE TRAMADOL XANAX
+(integer) 11
+127.0.0.1:6379> sadd sales Dose 650ml 100ml 500ml 50ml 25ml 100ml 150ml 200ml 250ml 300ml
+(integer) 10
+127.0.0.1:6379> sadd sales date aaa bbb ccc ddd eee fff ggg hhh iii jjj
+(integer) 11
+127.0.0.1:6379> sadd sales amount 1000 2000 3000 4000 5000 6000 7000 8000 9000 5001
+(integer) 11
+127.0.0.1:6379> sadd customer name kkk lll mmm nnn ooo ppp qqq rrr sss ttt
+(integer) 11
+127.0.0.1:6379> sadd customer medneed DOlo AZithromycin PAraetomol ADdreall BRilinta CEphalexin DOxycycline OMeprazole TRamadol XAnax
+(integer) 11
+127.0.0.1:6379> sadd customer price 110 210 310 410 510 610 710 810 910 990
+(integer) 11
+127.0.0.1:6379> smembers drugs
+ 1) "addreall"
+ 2) "sp"
+ 3) "70"
+ 4) "11"
+ 5) "2mnl"
+ 6) "91"
+ 7) "51"
+ 8) "omeprazole"
+ 9) "10mnl"
+10) "300"
+11) "xanax"
+12) "7mnl"
+13) "81"
+14) "71"
+15) "5mnl"
+16) "150"
+17) "brilinta"
+18) "expiry"
+19) "1mnl"
+20) "250"
+21) "4mnl"
+22) "90"
+23) "500"
+24) "paraetomol"
+25) "41"
+26) "31"
+27) "200"
+28) "8mnl"
+29) "cephalexin"
+30) "20"
+31) "25"
+32) "61"
+33) "azithromycin"
+34) "9mnl"
+35) "650"
+36) "dose"
+37) "40"
+38) "name"
+39) "3mnl"
+40) "6mnl"
+41) "101"
+42) "dolo"
+43) "10"
+44) "doxycycline"
+45) "30"
+46) "21"
+47) "cp"
+48) "tramadol"
+49) "50"
+50) "60"
+51) "80"
+52) "100"
+127.0.0.1:6379> smembers drugsexpiry
+ 1) "Brilinta"
+ 2) "Xanax"
+ 3) "705"
+ 4) "10Mnl"
+ 5) "905"
+ 6) "5Mnl"
+ 7) "4Mnl"
+ 8) "605"
+ 9) "405"
+10) "name"
+11) "805"
+12) "Omeprazole"
+13) "quantity"
+14) "Doxycycline"
+15) "Tramadol"
+16) "Paraetomol"
+17) "Azithromycin"
+18) "2Mnl"
+19) "9Mnl"
+20) "expiry"
+21) "8Mnl"
+22) "305"
+23) "105"
+24) "6Mnl"
+25) "1Mnl"
+26) "Cephalexin"
+27) "7Mnl"
+28) "505"
+29) "Addreall"
+30) "Dolo"
+31) "205"
+32) "3Mnl"
+33) "155"
+127.0.0.1:6379> smembers sales
+ 1) "DOXYCYCLINE"
+ 2) "200ml"
+ 3) "date"
+ 4) "300ml"
+ 5) "aaa"
+ 6) "BRILINTA"
+ 7) "25ml"
+ 8) "fff"
+ 9) "jjj"
+10) "eee"
+11) "bbb"
+12) "OMEPRAZOLE"
+13) "PARACETOMOL"
+14) "ADDERALL"
+15) "650ml"
+16) "250ml"
+17) "iii"
+18) "ggg"
+19) "500ml"
+20) "AZITHROMYCIN"
+21) "4000"
+22) "100ml"
+23) "XANAX"
+24) "TRAMADOL"
+25) "DOLO"
+26) "amount"
+27) "150ml"
+28) "ddd"
+29) "5000"
+30) "9000"
+31) "5001"
+32) "7000"
+33) "hhh"
+34) "1000"
+35) "Dose"
+36) "CEOHALEXIN"
+37) "50ml"
+38) "ccc"
+39) "name"
+40) "8000"
+41) "3000"
+42) "6000"
+43) "2000"
+127.0.0.1:6379> smembers customer
+ 1) "210"
+ 2) "medneed"
+ 3) "ppp"
+ 4) "sss"
+ 5) "DOlo"
+ 6) "710"
+ 7) "510"
+ 8) "ooo"
+ 9) "OMeprazole"
+10) "ttt"
+11) "CEphalexin"
+12) "110"
+13) "610"
+14) "XAnax"
+15) "name"
+16) "910"
+17) "nnn"
+18) "410"
+19) "kkk"
+20) "price"
+21) "AZithromycin"
+22) "PAraetomol"
+23) "ADdreall"
+24) "TRamadol"
+25) "qqq"
+26) "lll"
+27) "rrr"
+28) "BRilinta"
+29) "mmm"
+30) "DOxycycline"
+31) "810"
+32) "310"
+33) "990"

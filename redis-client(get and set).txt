@@ -1,0 +1,151 @@
+shasianand@LAPTOP-CIANLII3:~$ redis-cli
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379> flushall
+OK
+127.0.0.1:6379> hmset drugs name dolo dose 650 expiry 1.2.2024 cp 10 sp 20
+OK
+127.0.0.1:6379> hmset drugs1 name paracetomol dose 650 expiry 2.6.2024 cp 12 sp 15
+OK
+127.0.0.1:6379> hmset drugs2 name azithromycin dose 50 expiry 10.6.2024 cp 20 sp 25
+OK
+127.0.0.1:6379> hgetall drugs
+ 1) "name"
+ 2) "dolo"
+ 3) "dose"
+ 4) "650"
+ 5) "expiry"
+ 6) "1.2.2024"
+ 7) "cp"
+ 8) "10"
+ 9) "sp"
+10) "20"
+127.0.0.1:6379> hgetall drugs1
+ 1) "name"
+ 2) "paracetomol"
+ 3) "dose"
+ 4) "650"
+ 5) "expiry"
+ 6) "2.6.2024"
+ 7) "cp"
+ 8) "12"
+ 9) "sp"
+10) "15"
+127.0.0.1:6379> hgetall drugs2
+ 1) "name"
+ 2) "azithromycin"
+ 3) "dose"
+ 4) "50"
+ 5) "expiry"
+ 6) "10.6.2024"
+ 7) "cp"
+ 8) "20"
+ 9) "sp"
+10) "25"
+127.0.0.1:6379> hmset drugsexpiry name dolo expiry 1.2.2024 quantity 100
+OK
+127.0.0.1:6379> hmset drugsexpiry1 name paracetomol  expiry 2.6.2024 quantity 150
+OK
+127.0.0.1:6379> hmset drugsexpiry2 name azithromycin  expiry 10.6.2024 quantity 200
+OK
+127.0.0.1:6379> hgetall drugsexpiry
+1) "name"
+2) "dolo"
+3) "expiry"
+4) "1.2.2024"
+5) "quantity"
+6) "100"
+127.0.0.1:6379> hgetall drugsexpiry1
+1) "name"
+2) "paracetomol"
+3) "expiry"
+4) "2.6.2024"
+5) "quantity"
+6) "150"
+127.0.0.1:6379> hgetall drugsexpiry2
+1) "name"
+2) "azithromycin"
+3) "expiry"
+4) "10.6.2024"
+5) "quantity"
+6) "200"
+127.0.0.1:6379> hmset sales name dolo dose 650 quantity 200 date 2.2.2024 amt 2000
+OK
+127.0.0.1:6379> hmset sales1 name paracetomol dose 650 quantity 200 date 10.2.2024 amt 5000
+OK
+127.0.0.1:6379> hmset sales2 name azithromycin dose 50 quantity 300 date 6.2.2024 amt 3000
+OK
+127.0.0.1:6379> hmset customers name xxx medneed dolo quantity 10 price 200 ph 1111111111
+OK
+127.0.0.1:6379> hmset customers1 name yyy medneed paracetomol quantity 15 price 300 ph 2222222222
+OK
+127.0.0.1:6379> hmset customers3 name zzz medneed azithromycin quantity 20 price 500 ph 3333333333
+OK
+127.0.0.1:6379> hgetall sales
+ 1) "name"
+ 2) "dolo"
+ 3) "dose"
+ 4) "650"
+ 5) "quantity"
+ 6) "200"
+ 7) "date"
+ 8) "2.2.2024"
+ 9) "amt"
+10) "2000"
+127.0.0.1:6379> hgetall sales1
+ 1) "name"
+ 2) "paracetomol"
+ 3) "dose"
+ 4) "650"
+ 5) "quantity"
+ 6) "200"
+ 7) "date"
+ 8) "10.2.2024"
+ 9) "amt"
+10) "5000"
+127.0.0.1:6379> hgetall sales2
+ 1) "name"
+ 2) "azithromycin"
+ 3) "dose"
+ 4) "50"
+ 5) "quantity"
+ 6) "300"
+ 7) "date"
+ 8) "6.2.2024"
+ 9) "amt"
+10) "3000"
+127.0.0.1:6379> hgetall customers
+ 1) "name"
+ 2) "xxx"
+ 3) "medneed"
+ 4) "dolo"
+ 5) "quantity"
+ 6) "10"
+ 7) "price"
+ 8) "200"
+ 9) "ph"
+10) "1111111111"
+127.0.0.1:6379> hgetall customers1
+ 1) "name"
+ 2) "yyy"
+ 3) "medneed"
+ 4) "paracetomol"
+ 5) "quantity"
+ 6) "15"
+ 7) "price"
+ 8) "300"
+ 9) "ph"
+10) "2222222222"
+127.0.0.1:6379> hgetall customers3
+ 1) "name"
+ 2) "zzz"
+ 3) "medneed"
+ 4) "azithromycin"
+ 5) "quantity"
+ 6) "20"
+ 7) "price"
+ 8) "500"
+ 9) "ph"
+10) "3333333333"
+127.0.0.1:6379> save
+OK
