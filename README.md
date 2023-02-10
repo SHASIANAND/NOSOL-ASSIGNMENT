@@ -22,8 +22,11 @@ Pharmacy management is used to organize and manage the details of medicines(drug
 The database should support four entities:
 
  1)Drugs Information as 'drugs'
+ 
  2)Expiry Information as 'drugsexpiry'
+ 
  3)Sales Information as 'sales'
+ 
  4)Customers Informayion as 'customers'
  
 The data is stored as a set with entity name as set names and attribute name as key followed by values .Each set has over three attributes with values associated with it.
