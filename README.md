@@ -1,8 +1,9 @@
 # NOSOL-ASSIGNMENT
 PHARMACY MANGEMENT
 
-What is pharmacy medicine?
-A pharmacy medicine, also known as a P-medicine is a medicine that can only be bought from a pharmacy either online or in-store, like LloydsPharmacy. Pharmacy medicines can be intended for short-term or long-term use and treatment of health conditions, such as pain, acne or hay fever.
+What is pharmacy medicine? 
+
+  A pharmacy medicine, also known as a P-medicine is a medicine that can only be bought from a pharmacy either online or in-store, like LloydsPharmacy. Pharmacy medicines can be intended for short-term or long-term use and treatment of health conditions, such as pain, acne or hay fever.
 
 Pharmacy management is used to organize and manage the details of medicines(drugs),dose,quantity,expirydate,sales,customer details.It will help the pharmacy owners to monitor the need and availability of medicine.This configuration includes,
 
