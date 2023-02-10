@@ -11,7 +11,7 @@ Pharmacy management is used to organize and manage the details of medicines(drug
   name,dose,expiry,cp,sp
   
  2.DrugsExpiry
-  name,expiry,quantity,
+  name,expiry,quantity
   
  3.Sales
   name,dose,date,amount
@@ -19,7 +19,8 @@ Pharmacy management is used to organize and manage the details of medicines(drug
  4.Customer
    name,medneed,price
   
-The database should support four entities
+The database should support four entities:
+
  1)Drugs Information as 'drugs'
  2)Expiry Information as 'drugsexpiry'
  3)Sales Information as 'sales'
@@ -30,5 +31,7 @@ The data is stored as a set with entity name as set names and attribute name as 
 Abbreviations used in this application:
 
    cp-CostPrice
+   
    sp-SellingPrice
+   
    medneed-Medicine Need
